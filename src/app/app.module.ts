@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
 import { NgxEditorModule } from "ngx-editor";
+import { CustomMenuComponent } from "./custom-menu/custom-menu.component";
 
 @NgModule({
   imports: [
@@ -14,7 +15,7 @@ import { NgxEditorModule } from "ngx-editor";
     ReactiveFormsModule,
     NgxEditorModule
   ],
-  declarations: [AppComponent],
+  declarations: [AppComponent,CustomMenuComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

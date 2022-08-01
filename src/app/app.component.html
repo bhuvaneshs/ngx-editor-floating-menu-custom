@@ -7,6 +7,9 @@
           <ngx-editor-floating-menu [editor]="editor" [autoPlace]="true">
             <ngx-editor-menu [toolbar]="toolbar" [editor]="editor"></ngx-editor-menu>
           </ngx-editor-floating-menu>
+          <ng-template #customMenu>
+            <app-custom-menu [editor]="editor"></app-custom-menu>
+          </ng-template>
         </ngx-editor>
         {{html | json}}
       </div>
