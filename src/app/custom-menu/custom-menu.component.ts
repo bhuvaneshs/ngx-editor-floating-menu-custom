@@ -53,4 +53,7 @@ export class CustomMenuComponent implements OnInit {
 
     this.editor.registerPlugin(plugin);
   }
+  onChange(event){
+    console.log("event : ",event);
+  }
 }

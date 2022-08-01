@@ -5,11 +5,11 @@
       <div class="editor">
         <ngx-editor [editor]="editor" [(ngModel)]="html" (onModelChange)="onChange">
           <ngx-editor-floating-menu [editor]="editor" [autoPlace]="true">
-            <ngx-editor-menu [toolbar]="toolbar" [editor]="editor"></ngx-editor-menu>
+            <ngx-editor-menu [customMenuRef]="customMenu" [toolbar]="toolbar" [editor]="editor"></ngx-editor-menu>
+            <ng-template #customMenu>
+              <app-custom-menu [editor]="editor"></app-custom-menu>
+            </ng-template>
           </ngx-editor-floating-menu>
-          <ng-template #customMenu>
-            <app-custom-menu [editor]="editor"></app-custom-menu>
-          </ng-template>
         </ngx-editor>
         {{html | json}}
       </div>
