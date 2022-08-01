@@ -1,0 +1,14 @@
+<div class="container">
+  <h2 class="title">Floating menu with custom component</h2>
+
+  <div class="content">
+      <div class="editor">
+        <ngx-editor [editor]="editor" [(ngModel)]="html" (onModelChange)="onChange">
+          <ngx-editor-floating-menu [editor]="editor" [autoPlace]="true">
+            <ngx-editor-menu [toolbar]="toolbar" [editor]="editor"></ngx-editor-menu>
+          </ngx-editor-floating-menu>
+        </ngx-editor>
+        {{html | json}}
+      </div>
+  </div>
+</div>
